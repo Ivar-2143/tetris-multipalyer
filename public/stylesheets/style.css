@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    display: flex;
+    height: 100vh;
+}
+
+section{
+    display: inline-block;
+}
+main {
+    position: relative;
+}
+.players button{
+    background-color: rgb(77, 77, 248);
+    color: white;
+}
+.btn{
+    display: block;
+    cursor: pointer;
+    padding: 8px 40px;
+    border-radius: 4px;
+    margin: 0 auto 8px auto; 
+    border: none;
+}
+.players section{
+    display: block;
+    margin: 24px 0;
+}
+.players section p{
+    padding: 4px 8px;
+}
+.countdown{
+    position: absolute;
+    transform: translateY(-400%);
+    width: 100%;
+}
+.countdown h3{
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+.countdown .time{
+    color:red;
+}
+.game{
+    /* padding: 64px; */
+    display: flex;
+    width: calc(100% - 300px);
+    align-items: center;
+}
+.players{
+    width: 300px;
+    vertical-align: top;
+    padding: 32px;
+    background-color: rgb(38, 38, 38);
+    position: relative;
+    color: white;
+}
+.player_name{
+    position: absolute;
+    left: 50%;
+    top: -5%;
+    transform: translateX(-50%);
+}
+.game_frame{
+    width: calc(40px * 10);
+    height: calc(40px * 16);
+    margin: 0 auto;
+    position: relative;
+    background-color: rgb(38, 38, 38);
+    vertical-align: bottom;
+    display: inline-block;
+    /* margin: 0 64px; */
+}
+    .game_frame .row{
+        font-size: 0;
+        outline: none;
+    }
+        .game_frame .row .cell{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgb(80, 80, 80);
+        }
+
+.box{
+    width: calc(40px *2);
+    height: calc(40px *2);
+    position: relative;
+    /* transition: 1s linear; */
+    transition-timing-function: linear;
+}
+.cell[filled='true'], .current-block{
+    border-bottom: 1px solid black;
+}
+#pop_up{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgb(80, 80, 80);
+    padding: 4px 16px;
+    color: white;
+    font-size: 0.8rem;
+}
+#pop_up span{
+    font-weight: 600;
+}
+#btn_ready{
+    margin-top: 8px;
+    background-color: orangered;
+    color: white;
+    display: none;
+}
+#btn_ready:disabled{
+    background-color: gray;
+}
+#btn_leave-battle{
+    background-color: rgb(255, 36, 36);
+    display: none;
+}
